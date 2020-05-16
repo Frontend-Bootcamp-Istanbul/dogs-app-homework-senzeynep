@@ -5,6 +5,7 @@ import {Switch, Route} from "react-router-dom";
 import routes from "./routes";
 import Homepage from "./containers/Homepage";
 import FilteredDogs from "./containers/FilteredDogs";
+import DogDetail from "./containers/DogDetail";
 
 class App extends React.Component{
     render(){
@@ -15,7 +16,7 @@ class App extends React.Component{
                     <Route path="/" exact component={Homepage} />
                     <Route path='/hakkinda' exact component={() => <div>Hakkimizda Componenti</div>} />
                     <Route path="/tur/:yazilanTur" exact component={FilteredDogs} />
-                    <Route path="/detail/:dogId" exact component={DogDetail} />
+                    <Route path="/detay/:dogId" exact component={DogDetail} />
                     <Route component={() => <div><h1>404 sayfa bulununamadi</h1></div>} />
                     {/*{*/}
                     {/*    routes.map((route) => {*/}
